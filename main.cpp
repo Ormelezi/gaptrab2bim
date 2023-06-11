@@ -175,5 +175,49 @@ void mostrarMovimentos() {
 
 int main() {
 
+    char opcao;
+
+    do {
+        cout << "----- MENU -----" << endl;
+        cout << "1. Cadastrar cliente" << endl;
+        cout << "2. Cadastrar produto" << endl;
+        cout << "3. Realizar venda" << endl;
+        cout << "4. Mostrar clientes cadastrados" << endl;
+        cout << "5. Mostrar produtos no estoque" << endl;
+        cout << "6. Mostrar vendas realizados" << endl;
+        cout << "7. Sair" << endl;
+        cout << "Digite uma opção: ";
+        cin >> opcao;
+
+        switch (opcao) {
+            case '1':
+                cadastrarCliente();
+                break;
+            case '2':
+                cadastrarProduto();
+                break;
+            case '3':
+                realizarMovimento();
+                break;
+            case '4':
+                mostrarClientes();
+                break;
+            case '5':
+                mostrarProdutos();
+                break;
+            case '6':
+                mostrarMovimentos();
+                break;
+            case '7':
+                cout << "Saindo do programa..." << endl;
+                break;
+            default:
+                cout << "Opção inválida. Por favor, digite uma opção válida." << endl;
+                break;
+        }
+
+        cout << endl;
+    } while (opcao != '7');
+
     return 0;
 }
